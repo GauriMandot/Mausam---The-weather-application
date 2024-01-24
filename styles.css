@@ -1,0 +1,258 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@400&display=swap');
+
+*,*::before,*::after{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Merriweather Sans', sans-serif;
+}
+
+:root {
+    --colorDark1: #112D4E;
+    --colorDark2: #3F72AF;
+    --colorLight1: #DBE2EF;
+    --colorLight2: #F9F7F7;
+}
+
+img{
+    max-width:100%;
+}
+
+#wrapper{
+ 
+    height:100vh;
+    width:100vw;
+    overflow-x: hidden;
+    background-image: linear-gradient(160deg, #112d4e 0%, #3f72af 100%);
+    color: var(--colorLight2);
+    display: flex;
+    justify-content: center;
+}
+
+#container{
+    /* background-color: orange; */
+    padding:3rem;
+    width:80%;
+    max-width:800px;
+} 
+
+h1{ 
+    text-transform:uppercase;
+    text-align: center;
+}
+
+#button-boxes{
+    display: flex;
+    justify-content: space-between;
+    margin-top:4rem;
+}
+
+.weather-button{
+    cursor: pointer;
+    font-size: 0.875rem;
+    letter-spacing: 1.75px;
+    padding: 5px 8px;
+}
+
+.current-button{
+    background-color: rgba(219,226,239,0.5);
+    border-radius: 4px;
+}
+
+#weather-tab{
+    /* background-color:plum; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.sub-container{
+   /* background-color: red; */
+   display:flex;
+   flex-direction: column;
+   align-items: center;
+   width: 100%;
+}
+
+.grant-permission-tab{
+    display: none;
+}
+
+#location-image{
+   margin-top:2rem;
+   margin-bottom:2rem; 
+}
+
+#grant-permission-heading{
+    font-size: 1.75rem;
+    font-weight: 600; 
+}
+
+#grant-permission-para{
+    font-size:0.85rem;
+    font-weight: 500;
+    margin-top: 0.75rem;
+    margin-bottom: 1.75rem;
+    letter-spacing: 0.75px;
+}
+
+#grant-access-button{
+    all:unset;
+    /* all ke baare me likhna hai*/
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    border-radius: 5px;
+    background-color: var(--colorDark2);
+    cursor: pointer;
+    padding: 10px 30px;
+    margin-bottom: 10px;
+   
+}
+
+.search-tab{
+    display: none;
+    margin-top:1.7rem;
+    width:100%;
+    align-items: baseline;
+    gap:1rem;
+}
+
+#search-bar{   
+   all:unset;
+   width:80%;
+   height:40px;
+   padding: 0 20px;
+   background-color:rgba(219, 226, 239, 0.5);
+   border-radius: 10px;
+}
+
+#search-bar::placeholder{
+    color: rgba(255, 255, 255, 0.7);
+}
+
+#search-bar:focus{
+    outline: 3px solid rgba(255, 255, 255, 0.7);
+}
+
+#search-button{
+    all:unset;
+    border-radius: 50%;
+    padding:0.5rem;
+    background-color:#3F72AF;
+}
+
+.show-weather{
+    display: none;
+}
+
+
+#name-div{
+    display: flex;
+    gap:1rem;
+    margin-top:3rem;
+
+}
+
+#city-name{
+    font-size:1.5rem;
+    font-weight:200;
+}
+
+#country-flag{
+    width:30px;
+    height:30px;
+}
+
+#weather-description{
+    margin-top:1rem;
+    text-transform: capitalize;
+}
+
+#weather-icon{
+    width: 50px;
+    height:50px;
+}
+
+#temperature{
+    font-size:2rem;
+    font-weight:700;
+}
+
+#detail-box{
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top:2rem;
+    justify-content: space-evenly;
+    gap:1rem;
+}
+
+.weather-details{
+    background-color: rgba(219, 226, 239, 0.5);
+    border-radius: 5px;
+    padding:1rem 2rem 1rem 2rem;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    gap:1rem;
+    width:30%;
+    min-width:100px;
+
+}
+
+.icons{
+    width:3rem;
+    height: 3rem;
+}
+
+.loading-tab{
+    display: none;
+}
+
+#loading-text{
+    text-transform: uppercase;
+
+}
+
+.error-tab{
+    display: none;
+    margin-top:3rem;
+}
+
+#error-image{
+    width: 10rem;
+    height: 10rem;
+}
+
+#error-message{
+    font-size: 1.75rem;
+    font-weight: 600; 
+}
+
+
+.active{
+    display:flex;
+} 
+
+
+@media(max-width:460px){
+    #button-boxes{
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .weather-button{
+        margin:1rem;
+    }
+
+    #detail-box{
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap:1rem;
+    }
+    
+}

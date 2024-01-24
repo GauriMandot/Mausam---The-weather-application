@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mausam- The weather application</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div id="wrapper">
+      <div id="container">
+        <h1>Mausam - The weather app</h1>
+        <div id="button-boxes">
+          <div id="your-weather-button" class="weather-button">
+            Your Weather
+          </div>
+          <div id="search-weather-button" class="weather-button">
+            Search Weather
+          </div>
+        </div>
+
+        <div id="weather-tab">
+          <div class="grant-permission-tab sub-container">
+            <div id="location-image">
+              <img
+                src=".\assets\location.png"
+                id="current-location-image"
+                loading="lazy"
+                height="80"
+                width="80"
+              />
+            </div>
+            <h2 id="grant-permission-heading">Grant Location Access</h2>
+            <p id="grant-permission-para">
+              Allow Access To Get Weather Information
+            </p>
+            <button id="grant-access-button">Grant access</button>
+          </div>
+
+          <div class="search-tab ">
+            <input
+              type="text"
+              placeholder="Search for city..."
+              id="search-bar"
+            />
+            <button id="search-button">
+              <img
+                src="assets\search.png"
+                width="20"
+                height="20"
+                loading="lazy"
+              />
+            </button>
+          </div>
+
+          <div class="show-weather sub-container">
+            <div id="name-div">
+              <p id="city-name"></p>
+              <img id="country-flag" />
+            </div>
+
+            <p id="weather-description"></p>
+            <img id="weather-icon" />
+            <p id="temperature"></p>
+
+            <div id="detail-box">
+              <div id="windspeed" class="weather-details">
+                <img src="assets\wind.png" loading="lazy" class="icons" />
+                <p>WINDSPEED</p>
+                <p id="windspeed-data"></p>
+              </div>
+              <div id="humidity" class="weather-details">
+                <img src="assets\humidity.png" loading="lazy" class="icons" />
+                <p>HUMIDITY</p>
+                <p id="humidity-data"></p>
+              </div>
+              <div id="clouds" class="weather-details">
+                <img src="assets\cloud.png" loading="lazy"class="icons" />
+                <p>CLOUDS</p>
+                <p id="clouds-data"></p>
+              </div>
+            </div>
+          </div>
+
+          <div class="loading-tab sub-container">
+            <img
+              src="assets\loading.gif"
+              height="150"
+              width="150"
+              loading="lazy"
+            />
+            <p id="loading-text">Loading</p>
+          </div>
+
+          <div class="error-tab sub-container">
+            <img src="assets\not-found.png" id="error-image">
+            <p id="error-message"></p>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
